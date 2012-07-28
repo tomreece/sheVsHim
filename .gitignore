@@ -14,3 +14,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 *.*~
+.classpath
+.project
+.settings
