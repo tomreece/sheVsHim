@@ -6,9 +6,13 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
-  
-  public static Result index() {
-    return ok(index.render("Your new application is ready. Tom rules. I take it back. Frank is actually an ok guy.Change"));
-  }
-  
+
+	public static Result index() {
+		return ok(views.html.index.render("tom roolz"));
+	}
+
+	public static Result fight(String id) {
+		return ok(views.html.fight.render(id));
+	}
+
 }

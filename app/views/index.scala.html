@@ -1,7 +1,22 @@
 @(message: String)
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message, style = "Java")
-    
+@main("shevshim.com") {
+    <h1>index</h1>
+    <div class="container_12">
+    	<div class="grid_12">
+    		<p><a href="@routes.Application.fight("1")">a fight</a></p>
+    	</div>
+    	<div class="grid_12">
+    		<p><a href="@routes.Application.fight("2")">a fight</a></p>
+    	</div>
+    	<div class="grid_12">
+    		<p><a href="@routes.Application.fight("3")">a fight</a></p>
+    	</div>
+    	<div class="grid_12">
+    		<p><a href="@routes.Application.fight("4")">a fight</a></p>
+    	</div>
+    	<div class="grid_12">
+    		<p><a href="@routes.Application.fight("5")">a fight</a></p>
+    	</div>
+    </div>
 }
