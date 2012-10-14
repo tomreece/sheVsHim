@@ -11,6 +11,10 @@ public class Application extends Controller {
 	public static Result index() {
 		return ok(views.html.index.render(Fight.all(), fightForm));
 	}
+	
+	public static Result add() {
+		return ok(views.html.add.render(fightForm));
+	}
 
 	public static Result newFight() {
 		Form<Fight> filledForm = fightForm.bindFromRequest();

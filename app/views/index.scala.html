@@ -20,16 +20,7 @@
 		        }
 		    </ul>
 		    
-		    <h2>Add a new fight</h2>
-		    
-		    @form(routes.Application.newFight()) {
-		        
-		        @inputText(fightForm("sideA"))
-		        @inputText(fightForm("sideB")) 
-		        
-		        <input type="submit" value="Create">
-		        
-		    }
+		    <a href="@routes.Application.add()">Add a new fight</a>
     	</div>
     </div>
     
