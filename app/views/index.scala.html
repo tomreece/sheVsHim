@@ -1,27 +1,23 @@
-@(message: String)
-
 @main("shevshim.com") {
 <div class="container_12">
-	<div class="grid_12 fightListRow">
+	<div class="grid_12">
 		<div class="grid_6 alpha">
-			<div class="fightListCol">
-				left (click me, anywhere in the white box)
-			</div> 
+			left
 		</div>
 		<div class="grid_6 omega">
-			<div class="fightListCol">
-				right (click me, anywhere in the white box)
-			</div> 
+			right
 		</div>
 	</div>
 </div>
 
 <script>
+	/*
 	$(document).ready(function() {
 		$(".fightListRow").click(function() {
 			window.location = "@routes.Application.fight("1")";
 			return false;
 		});
 	});
+	*/
 </script>
 }

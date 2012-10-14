@@ -3,8 +3,8 @@
 @main("shevshim.com") {
 <h1>@id</h1>
 <div class="container_12">
-	<div class="grid_6 fight">
-		<div class="fightText">
+	<div class="grid_6">
+		<div class="fight">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			Vivamus at augue id purus suscipit mollis. Sed luctus, libero nec
 			ornare porttitor, nunc arcu varius purus, ut cursus neque nisl eu
@@ -17,9 +17,12 @@
 			dignissim. Fusce elit tortor, convallis at pharetra nec, pulvinar
 			fermentum dui.
 		</div>
+		<button class="voteButton">
+			Vote for side A
+		</button>
 	</div>
-	<div class="grid_6 fight">
-		<div class="fightText">
+	<div class="grid_6">
+		<div class="fight">
 			Nulla facilisi. Ut urna nisi, hendrerit et mattis sit amet,
 			facilisis a justo. Phasellus tincidunt tortor facilisis mauris
 			laoreet sodales. Cum sociis natoque penatibus et magnis dis
@@ -38,6 +41,16 @@
 			id metus aliquet auctor. Nulla consequat aliquet nulla non malesuada.
 			Phasellus sodales diam convallis nisl elementum mattis.
 		</div>
+		<button class="voteButton">
+			Vote for side B
+		</button>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		//$(".voteButton").button({ icons: { primary: "ui-icon-check" } });
+		$(".voteButton").button();
+	});
+</script>
 }
