@@ -3,13 +3,14 @@
 
 # --- !Ups
 
-create table task (
+create table fight (
   id                        bigint not null,
-  label                     varchar(255),
-  constraint pk_task primary key (id))
+  side_a                    varchar(255),
+  side_b                    varchar(255),
+  constraint pk_fight primary key (id))
 ;
 
-create sequence task_seq;
+create sequence fight_seq;
 
 
 
@@ -18,9 +19,9 @@ create sequence task_seq;
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table if exists task;
+drop table if exists fight;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
-drop sequence if exists task_seq;
+drop sequence if exists fight_seq;
 
