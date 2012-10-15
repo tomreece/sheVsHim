@@ -19,7 +19,7 @@ public class Application extends Controller {
 	public static Result newFight() {
 		Form<Fight> filledForm = fightForm.bindFromRequest();
 		if (filledForm.hasErrors()) {
-			return badRequest(views.html.index.render(Fight.all(), filledForm));
+			return badRequest(views.html.add.render(filledForm));
 		} else {
 			Fight.create(filledForm.get());
 			return redirect(routes.Application.index());

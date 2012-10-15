@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
 @Entity
@@ -17,7 +18,10 @@ public class Fight extends Model {
 	@Id
 	public Long id;
 	
+	@Required
 	public String sideA;
+	
+	@Required
 	public String sideB;
 
 	public static List<Fight> all() {

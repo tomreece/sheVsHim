@@ -2,11 +2,11 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
 # Home page
 GET     /                           controllers.Application.index()
 GET		/add						controllers.Application.add()
 POST	/add						controllers.Application.newFight()
 POST	/fight/:id/delete			controllers.Application.deleteFight(id: Long)
-
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
