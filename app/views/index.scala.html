@@ -4,21 +4,25 @@
 
 @main("home") {
 <div>
-	<h1>@fights.size() fight(s)</h1>
-
-	<ul>
 		@for(fight <- fights) {
-			<li>
-				@fight.sideA - @fight.sideB
+				<div class="fight">
+					<div class="side">
+						<span class="sideHeader">side a</span>
+						@fight.sideA
+					</div>
+					<div class="side">
+						<span class="sideHeader">side b</span>
+						@fight.sideB
+					</div>
+					<div class="clearfix"></div>
+				</div>
 
 				<!-- 
 				@form(routes.Application.deleteFight(fight.id)) {
 					<input type="submit" value="Delete">
 				}
 				-->
-			</li>
 		}
-	</ul>
 	
 	<!-- 
 	<aside>

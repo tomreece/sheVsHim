@@ -3,20 +3,16 @@
 @import helper._
 
 @main("add") {
-	<div class="container_12">
-		<div class="grid_12">
+	<div>
+		<h2>Add a new fight</h2>
 		
-		    <h2>Add a new fight</h2>
+		@form(routes.Application.newFight()) {
 		    
-		    @form(routes.Application.newFight()) {
-		        
-		        @inputText(fightForm("sideA"))
-		        @inputText(fightForm("sideB")) 
-		        
-		        <input type="submit" value="Create">
-		        
-		    }
-    	</div>
-    </div>
-    
+			@inputText(fightForm("sideA"))
+			@inputText(fightForm("sideB")) 
+		    
+			<input type="submit" value="Add">
+		    
+		}
+	</div>
 }
