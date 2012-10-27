@@ -11,6 +11,8 @@ GET     /                           controllers.Application.index()
 # Add
 GET		/add						controllers.Application.add()
 POST	/add						controllers.Application.newFight()
+
+# Delete
 POST	/fight/:id/delete			controllers.Application.deleteFight(id: Long)
 
 # About
