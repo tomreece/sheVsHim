@@ -14,11 +14,11 @@ create sequence fight_seq;
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+# -- SET REFERENTIAL_INTEGRITY FALSE;
 
 drop table if exists fight;
 
-SET REFERENTIAL_INTEGRITY TRUE;
+# -- SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists fight_seq;
 
