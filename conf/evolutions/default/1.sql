@@ -1,12 +1,9 @@
-# --- Created by Ebean DDL
-# To stop Ebean DDL generation, remove this comment and start using Evolutions
-
 # --- !Ups
 
 create table fight (
   id                        bigint not null,
-  side_a                    varchar(255),
-  side_b                    varchar(255),
+  side_a                    text,
+  side_b                    text,
   constraint pk_fight primary key (id))
 ;
 

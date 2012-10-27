@@ -30,4 +30,8 @@ public class Application extends Controller {
 		Fight.delete(id);
 		return redirect(routes.Application.index());
 	}
+	
+	public static Result about() {
+		return ok(views.html.about.render());
+	}
 }

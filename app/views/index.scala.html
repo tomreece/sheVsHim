@@ -2,26 +2,29 @@
 
 @import helper._
 
-@main("Fight list") {
-	<div class="container_12">
-		<div class="grid_12">
-    
-		    <h1>@fights.size() fight(s)</h1>
-		    
-		    <ul>
-		        @for(fight <- fights) {
-		            <li>
-		                @fight.sideA - @fight.sideB
-		                
-		                @form(routes.Application.deleteFight(fight.id)) {
-		                    <input type="submit" value="Delete">
-		                }
-		            </li>
-		        }
-		    </ul>
-		    
-		    <a href="@routes.Application.add()">Add a new fight</a>
-    	</div>
-    </div>
-    
+@main("home") {
+<div>
+	<h1>@fights.size() fight(s)</h1>
+
+	<ul>
+		@for(fight <- fights) {
+			<li>
+				@fight.sideA - @fight.sideB
+
+				<!-- 
+				@form(routes.Application.deleteFight(fight.id)) {
+					<input type="submit" value="Delete">
+				}
+				-->
+			</li>
+		}
+	</ul>
+	
+	<!-- 
+	<aside>
+		<h3>aside</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+	</aside>
+	 -->
+</div>
 }
