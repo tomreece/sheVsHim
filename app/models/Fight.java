@@ -1,5 +1,6 @@
 package models;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -25,7 +26,10 @@ public class Fight extends Model {
 	public String sideB;
 
 	public static List<Fight> all() {
-		return find.all();
+		// TODO: refactor this inefficiency
+		List<Fight> allFights = find.all();
+		Collections.reverse(allFights);
+		return allFights;
 	}
 
 	public static void create(Fight fight) {
